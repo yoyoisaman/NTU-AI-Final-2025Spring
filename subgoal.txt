@@ -1,0 +1,5 @@
+Subgoals_Refined_1.json task: "make the Nether Portal"
+
+Subgoals_Refined_2.json task: "Craft 1 stone pickaxe"
+
+Subgoals_Refined_3.json task: Craft 1 iron pickaxe
