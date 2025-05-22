@@ -1,0 +1,3 @@
+async function mineDiamondOre(bot) {
+    // The function involves mining a diamond ore using an iron pickaxe. It first equips an iron pickaxe from the inventory. Then, it explores the environment to locate a diamond ore block within a specified range. If a diamond ore is found, it proceeds to mine the block. If no diamond ore is found within the exploration time, it indicates that no diamond ore was located.
+}

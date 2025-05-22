@@ -1,0 +1,3 @@
+async function mineObsidianToTen(bot) {
+    // The function checks the current inventory for obsidian and calculates how many more blocks are needed to reach a total of 10. If additional obsidian is required, it attempts to equip a diamond pickaxe from the inventory. If a diamond pickaxe is available, it equips it and proceeds to mine the necessary number of obsidian blocks. If no diamond pickaxe is found, the function exits without mining. If the inventory already contains 10 or more obsidian blocks, no mining is performed.
+}

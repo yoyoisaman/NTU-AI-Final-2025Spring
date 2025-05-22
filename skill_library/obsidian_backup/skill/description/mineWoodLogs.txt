@@ -1,0 +1,3 @@
+async function mineWoodLogs(bot) {
+    // The function involves mining 10 birch wood logs. It first checks for nearby logs within a 32-block distance. If fewer than 10 logs are found, it explores the area to locate more logs. Once at least 10 logs are identified, it proceeds to mine them. After successfully mining the logs, it reports the completion of the task.
+}

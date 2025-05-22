@@ -36,7 +36,7 @@ class Voyager:
         curriculum_agent_warm_up: Dict[str, int] = None,
         curriculum_agent_core_inventory_items: str = r".*_log|.*_planks|stick|crafting_table|furnace"
         r"|cobblestone|dirt|coal|.*_pickaxe|.*_sword|.*_axe",
-        curriculum_agent_mode: str = "manual",
+        curriculum_agent_mode: str = "auto",
         critic_agent_model_name: str = "gpt-4o",
         critic_agent_temperature: float = 0,
         critic_agent_mode: str = "auto",
@@ -109,6 +109,7 @@ class Voyager:
         self.env_wait_ticks = env_wait_ticks
         self.reset_placed_if_failed = reset_placed_if_failed
         self.max_iterations = max_iterations
+        self.global_action_calls = 0
 
         # set openai api key
         os.environ["OPENAI_API_KEY"] = openai_api_key
@@ -202,6 +203,7 @@ class Voyager:
     def step(self):
         if self.action_agent_rollout_num_iter < 0:
             raise ValueError("Agent must be reset before stepping")
+        self.global_action_calls += 1
         ai_message = self.action_agent.llm(self.messages)
         print(f"\033[34m****Action Agent ai message****\n{ai_message.content}\033[0m")
         self.conversations.append(
@@ -292,6 +294,9 @@ class Voyager:
         return messages, reward, done, info
 
     def learn(self, reset_env=True):
+        with open("./learn_log.csv", "w") as f:
+            f.write("iteration,task,success\n")
+            
         if self.resume:
             # keep the inventory
             self.env.reset(
@@ -349,6 +354,9 @@ class Voyager:
                 print("Your last round rollout terminated due to error:")
                 print(f"\033[41m{e}\033[0m")
 
+            with open("./learn_log.csv", "a") as f:
+                f.write(f"{self.global_action_calls},{info['task']},{info['success']}\n")
+                
             if info["success"]:
                 self.skill_manager.add_new_skill(info)
 
@@ -377,6 +385,8 @@ class Voyager:
         return self.curriculum_agent.decompose_task(task, self.last_events)
 
     def inference(self, task=None, sub_goals=[], reset_mode="hard", reset_env=True):
+        with open("./inference_log.csv", "w") as f:
+            f.write("iteration,task,success\n")
         if not task and not sub_goals:
             raise ValueError("Either task or sub_goals must be provided")
         if not sub_goals:
@@ -401,6 +411,10 @@ class Voyager:
                 context=context,
                 reset_env=reset_env,
             )
+            
+            with open("./inference_log.csv", "a") as f:
+                f.write(f"{self.global_action_calls},{next_task},{info['success']}\n")
+                
             self.curriculum_agent.update_exploration_progress(info)
             print(
                 f"\033[35mCompleted tasks: {', '.join(self.curriculum_agent.completed_tasks)}\033[0m"

@@ -1,0 +1,3 @@
+async function equipIronPickaxe(bot) {
+    // The function checks the bot's inventory for an iron pickaxe. If an iron pickaxe is found, it equips the pickaxe in the bot's main hand. If no iron pickaxe is found, it indicates that the pickaxe is not in the inventory.
+}

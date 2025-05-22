@@ -1,0 +1,3 @@
+async function mineDeepslateLapisOre(bot) {
+    // The function involves mining a deepslate lapis ore using an iron pickaxe. It first checks if an iron pickaxe is available in the inventory and equips it. Then, it searches for a deepslate lapis ore block within a 32-block radius. If the ore is found, it proceeds to mine one block of deepslate lapis ore. If the pickaxe is not available or the ore is not found, it notifies the user accordingly. Upon successful mining, it informs the user that the deepslate lapis ore has been mined.
+}
