@@ -150,7 +150,12 @@ class CurriculumAgent:
         equipment = event["status"]["equipment"]
         inventory_used = event["status"]["inventoryUsed"]
         inventory = event["inventory"]
-
+        print("------------------")
+        print("------------------")
+        print("render_observation")
+        print(event["status"])
+        print("------------------")
+        print("------------------")  
         if not any(
             "dirt" in block
             or "log" in block

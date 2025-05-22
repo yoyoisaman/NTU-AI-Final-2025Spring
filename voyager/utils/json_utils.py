@@ -140,54 +140,36 @@ def correct_json(json_str: str) -> str:
             return balanced_str
     return json_str
 
+def fix_and_parse_json(json_str):
+    """處理可能被包在 markdown code block 中的不規範 JSON 字串"""
+    if not json_str or json_str.isspace():
+        return {
+            "reasoning": "Empty response", 
+            "success": False, 
+            "critique": "Empty response received"
+        }
 
-def fix_and_parse_json(
-    json_str: str, try_to_fix_with_gpt: bool = True
-) -> Union[str, Dict[Any, Any]]:
-    """Fix and parse JSON string"""
-    try:
-        json_str = json_str.replace("\t", "")
-        return json.loads(json_str)
-    except json.JSONDecodeError as _:  # noqa: F841
-        json_str = correct_json(json_str)
-        try:
-            return json.loads(json_str)
-        except json.JSONDecodeError as _:  # noqa: F841
-            pass
-    # Let's do something manually:
-    # sometimes GPT responds with something BEFORE the braces:
-    # "I'm sorry, I don't understand. Please try again."
-    # {"text": "I'm sorry, I don't understand. Please try again.",
-    #  "confidence": 0.0}
-    # So let's try to find the first brace and then parse the rest
-    #  of the string
-    try:
-        brace_index = json_str.index("{")
-        json_str = json_str[brace_index:]
-        last_brace_index = json_str.rindex("}")
-        json_str = json_str[: last_brace_index + 1]
-        return json.loads(json_str)
-    except json.JSONDecodeError as e:  # noqa: F841
-        # if try_to_fix_with_gpt:
-        #     print(
-        #         "Warning: Failed to parse AI output, attempting to fix."
-        #         "\n If you see this warning frequently, it's likely that"
-        #         " your prompt is confusing the AI. Try changing it up"
-        #         " slightly."
-        #     )
-        #     # Now try to fix this up using the ai_functions
-        #     ai_fixed_json = fix_json(json_str, JSON_SCHEMA)
-        #
-        #     if ai_fixed_json != "failed":
-        #         return json.loads(ai_fixed_json)
-        #     else:
-        #         # This allows the AI to react to the error message,
-        #         #   which usually results in it correcting its ways.
-        #         print("Failed to fix ai output, telling the AI.")
-        #         return json_str
-        # else:
-        raise e
+    # 去除 Markdown 的 ```json 或 ``` 標記
+    json_str = re.sub(r'^```(?:json)?\s*', '', json_str.strip(), flags=re.IGNORECASE)
+    json_str = re.sub(r'\s*```$', '', json_str.strip())
 
+    # 嘗試直接解析
+    try:
+        return json.loads(json_str)
+    except json.JSONDecodeError:
+        pass
+
+    # 嘗試修復單引號為雙引號
+    try:
+        fixed = json_str.replace("'", '"')
+        fixed = re.sub(r'([{,])\s*(\w+):', r'\1"\2":', fixed)
+        return json.loads(fixed)
+    except Exception:
+        return {
+            "reasoning": "Failed to parse response", 
+            "success": False, 
+            "critique": "Please provide output in valid JSON format"
+        }
 
 # def fix_json(json_str: str, schema: str) -> str:
 #     """Fix the given JSON string to make it parseable and fully complient with the provided schema."""

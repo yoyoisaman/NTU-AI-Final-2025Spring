@@ -28,3 +28,9 @@ v2:遞迴拆分成原子任務，有點慢，有點爛
 
 TaskPrepare_good.json->Subgoals-good.json->
 都是用4o
+
+critic agent: fix_and_parse_json
+
+製造石頭十字搞:
+
+他會把額軟石燒製成圓石，因為缺乏遊戲知識

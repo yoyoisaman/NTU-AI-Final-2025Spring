@@ -7,6 +7,6 @@ You must follow the following criteria:
 2) Each subgoal should follow a concise format, such as "Mine [quantity] [block]", "Craft [quantity] [item]", "Smelt [quantity] [item]", "Kill [quantity] [mob]", "Cook [quantity] [food]", "Equip [item]".
 3) Include each level of necessary tools as a subgoal, such as wooden, stone, iron, diamond, etc.
 
-You should only respond in JSON format as described below:
+You should only respond in format as described below:
 ["subgoal1", "subgoal2", "subgoal3", ...]
 Ensure the response can be parsed by Python `json.loads`, e.g.: no trailing commas, no single quotes, etc.
