@@ -2,7 +2,7 @@ from voyager import Voyager
 
 mc_port = 3798
 env_wait_ticks = 100
-openai_api_key = "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"
+openai_api_key = ""
 
 
 voyager = Voyager(
