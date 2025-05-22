@@ -1,0 +1,3 @@
+async function craftDiamondPickaxe(bot) {
+    // The function is about crafting a diamond pickaxe. It first checks if there are at least three diamonds in the inventory. If not, it stops the process. Then, it checks for at least two sticks, and if they are not available, it looks for planks to craft sticks. If planks are insufficient, it mines birch logs and crafts them into planks. After ensuring the availability of a crafting table, it places the table and crafts the diamond pickaxe. Finally, it reports the successful crafting of the diamond pickaxe.
+}

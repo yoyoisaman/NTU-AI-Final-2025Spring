@@ -1,13 +1,14 @@
 from voyager import Voyager
 import os
+import json
 import signal
 import sys
 import atexit
 
 
-mc_port = 5162
+mc_port = 59653
 env_wait_ticks = 50
-openai_api_key = os.getenv("OPENAI_API_KEY") 
+openai_api_key = "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"
 class PromptCounter:
     def __init__(self):
         self.action_agent_prompts = 0
@@ -32,9 +33,9 @@ voyager = Voyager(
     mc_port=mc_port,
     env_wait_ticks=env_wait_ticks,
     openai_api_key=openai_api_key,
-    skill_library_dir="./ckpt", # Load a learned skill library.
-    ckpt_dir="./run/demo", # Feel free to use a new dir. Do not use the same dir as skill library because new events will still be recorded to ckpt_dir. 
-    resume=False, # Do not resume from a skill library because this is not learning.
+    skill_library_dir="./skill_library/obsidian", # Load a learned skill library.
+    ckpt_dir="./run/obsidian_ckpt", # Feel free to use a new dir. Do not use the same dir as skill library because new events will still be recorded to ckpt_dir. 
+    resume=True, # Do not resume from a skill library because this is not learning.
 )
 
 original_action_llm = voyager.action_agent.llm
@@ -66,17 +67,21 @@ def exit_handler():
 atexit.register(exit_handler)
 
 def signal_handler(sig, frame):
-    print("\n程序被用户中断")
     prompt_counter.print_stats()
     sys.exit(0)
 
 signal.signal(signal.SIGINT, signal_handler)
 
 # Run task decomposition
-task = "Craft 1 Stone Pickaxe" # e.g. "Craft a diamond pickaxe"
-sub_goals = voyager.decompose_task(task=task)
+# task = "Craft a diamond pickaxe" # e.g. "Craft a diamond pickaxe"
+# sub_goals = voyager.decompose_task(task=task)
 
+# Read subgoals from file
+with open('./Subgoals_Refined_diamond_pickaxe.json', 'r') as f:
+    sub_goals = json.load(f)
+    
 print("----------SUB GOAL-----------")
 print(sub_goals)
 
-voyager.inference(sub_goals=sub_goals)
+# voyager.inference(sub_goals=sub_goals)Mine 1 Obsidian
+voyager.learn(reset_env=False)
