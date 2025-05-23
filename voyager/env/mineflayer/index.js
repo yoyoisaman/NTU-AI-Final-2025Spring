@@ -106,8 +106,8 @@ app.post("/start", (req, res) => {
         bot.loadPlugin(pvp);
         //bot.loadPlugin(minecraftHawkEye);
 
-        // bot.collectBlock.movements.digCost = 0;
-        // bot.collectBlock.movements.placeCost = 0;
+        bot.collectBlock.movements.digCost = 0;
+        bot.collectBlock.movements.placeCost = 0;
 
         obs.inject(bot, [
             OnChat,

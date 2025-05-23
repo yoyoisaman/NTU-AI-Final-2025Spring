@@ -6,24 +6,10 @@ import sys
 import atexit
 
 
-mc_port = 9899
+mc_port = 6529
 env_wait_ticks = 50
 openai_api_key = "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"
-class PromptCounter:
-    def __init__(self):
-        self.action_agent_prompts = 0
-        self.curriculum_agent_prompts = 0
-        self.critic_agent_prompts = 0
-        self.total_prompts = 0
-    
-    def print_stats(self):
-        print("\n===== Prompt 使用 =====")
-        print(f"Action Agent Prompts: {self.action_agent_prompts}")
-        print(f"Curriculum Agent Prompts: {self.curriculum_agent_prompts}")
-        print(f"Critic Agent Prompts: {self.critic_agent_prompts}")
-        print(f"共 Prompts: {self.total_prompts}")
-        print("==========================\n")
-prompt_counter = PromptCounter()
+
 
 # /gamemode spectator
 # /spectate bot
@@ -40,39 +26,55 @@ voyager = Voyager(
     resume=False, # Do not resume from a skill library because this is not learning.
 )
 
-original_action_llm = voyager.action_agent.llm
-original_curriculum_llm = voyager.curriculum_agent.llm
-original_critic_llm = voyager.critic_agent.llm
+# class PromptCounter:
+#     def __init__(self):
+#         self.action_agent_prompts = 0
+#         self.curriculum_agent_prompts = 0
+#         self.critic_agent_prompts = 0
+#         self.total_prompts = 0
+    
+#     def print_stats(self):
+#         print("\n===== Prompt 使用 =====")
+#         print(f"Action Agent Prompts: {self.action_agent_prompts}")
+#         print(f"Curriculum Agent Prompts: {self.curriculum_agent_prompts}")
+#         print(f"Critic Agent Prompts: {self.critic_agent_prompts}")
+#         print(f"共 Prompts: {self.total_prompts}")
+#         print("==========================\n")
+# prompt_counter = PromptCounter()
 
-def counted_action_llm(*args, **kwargs):
-    prompt_counter.action_agent_prompts += 1
-    prompt_counter.total_prompts += 1
-    return original_action_llm(*args, **kwargs)
+# original_action_llm = voyager.action_agent.llm
+# original_curriculum_llm = voyager.curriculum_agent.llm
+# original_critic_llm = voyager.critic_agent.llm
 
-def counted_curriculum_llm(*args, **kwargs):
-    prompt_counter.curriculum_agent_prompts += 1
-    prompt_counter.total_prompts += 1
-    return original_curriculum_llm(*args, **kwargs)
+# def counted_action_llm(*args, **kwargs):
+#     prompt_counter.action_agent_prompts += 1
+#     prompt_counter.total_prompts += 1
+#     return original_action_llm(*args, **kwargs)
 
-def counted_critic_llm(*args, **kwargs):
-    prompt_counter.critic_agent_prompts += 1
-    prompt_counter.total_prompts += 1
-    return original_critic_llm(*args, **kwargs)
+# def counted_curriculum_llm(*args, **kwargs):
+#     prompt_counter.curriculum_agent_prompts += 1
+#     prompt_counter.total_prompts += 1
+#     return original_curriculum_llm(*args, **kwargs)
 
-voyager.action_agent.llm = counted_action_llm
-voyager.curriculum_agent.llm = counted_curriculum_llm
-voyager.critic_agent.llm = counted_critic_llm
+# def counted_critic_llm(*args, **kwargs):
+#     prompt_counter.critic_agent_prompts += 1
+#     prompt_counter.total_prompts += 1
+#     return original_critic_llm(*args, **kwargs)
 
-def exit_handler():
-    prompt_counter.print_stats()
+# voyager.action_agent.llm = counted_action_llm
+# voyager.curriculum_agent.llm = counted_curriculum_llm
+# voyager.critic_agent.llm = counted_critic_llm
 
-atexit.register(exit_handler)
+# def exit_handler():
+#     prompt_counter.print_stats()
 
-def signal_handler(sig, frame):
-    prompt_counter.print_stats()
-    sys.exit(0)
+# atexit.register(exit_handler)
 
-signal.signal(signal.SIGINT, signal_handler)
+# def signal_handler(sig, frame):
+#     prompt_counter.print_stats()
+#     sys.exit(0)
+
+# signal.signal(signal.SIGINT, signal_handler)
 
 # Run task decomposition
 task = "Craft a Golden Sword" # e.g. "Craft a diamond pickaxe"
@@ -85,5 +87,5 @@ sub_goals = voyager.decompose_task(task=task)
 print("----------SUB GOAL-----------")
 print(sub_goals)
 
-voyager.inference(sub_goals=sub_goals)
+voyager.inference(sub_goals=sub_goals, reset_env=False)
 # voyager.learn(reset_env=False)

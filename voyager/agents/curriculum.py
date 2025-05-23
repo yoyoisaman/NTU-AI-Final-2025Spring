@@ -129,8 +129,9 @@ class CurriculumAgent:
 
     @property
     def progress(self):
-        return len(self.completed_tasks) + len(self.failed_tasks)
-
+        # return len(self.completed_tasks) + len(self.failed_tasks)
+        return len(self.completed_tasks)
+    
     def render_system_message(self):
         system_message = SystemMessage(content=load_prompt("curriculum"))
         assert isinstance(system_message, SystemMessage)
