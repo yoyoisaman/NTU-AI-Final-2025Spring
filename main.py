@@ -6,9 +6,9 @@ import sys
 import atexit
 
 
-mc_port = 45664
+mc_port = 9899
 env_wait_ticks = 50
-openai_api_key = "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"
+openai_api_key = "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"
 class PromptCounter:
     def __init__(self):
         self.action_agent_prompts = 0
@@ -27,6 +27,8 @@ prompt_counter = PromptCounter()
 
 # /gamemode spectator
 # /spectate bot
+# /effect give @p minecraft:night_vision 1000000 0 true
+# 1312162062533188546
 
 # First instantiate Voyager with skill_library_dir.
 voyager = Voyager(
@@ -73,15 +75,15 @@ def signal_handler(sig, frame):
 signal.signal(signal.SIGINT, signal_handler)
 
 # Run task decomposition
-# task = "Craft a diamond pickaxe" # e.g. "Craft a diamond pickaxe"
-# sub_goals = voyager.decompose_task(task=task)
+task = "Craft a Golden Sword" # e.g. "Craft a diamond pickaxe"
+sub_goals = voyager.decompose_task(task=task)
 
 # Read subgoals from file
-with open('./Subgoals_Refined_diamond_pickaxe.json', 'r') as f:
-    sub_goals = json.load(f)
+# with open('./Subgoals_Refined_diamond_pickaxe.json', 'r') as f:
+#     sub_goals = json.load(f)
     
 print("----------SUB GOAL-----------")
 print(sub_goals)
 
-voyager.inference(sub_goals=sub_goals) # Mine 1 Obsidian
+voyager.inference(sub_goals=sub_goals)
 # voyager.learn(reset_env=False)
