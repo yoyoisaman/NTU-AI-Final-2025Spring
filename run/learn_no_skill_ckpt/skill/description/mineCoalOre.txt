@@ -1,0 +1,3 @@
+async function mineCoalOre(bot) {
+    // The function is about mining coal ore if there is no coal in the inventory. It first checks if there is at least one coal in the inventory. If coal is already present, it exits without doing anything further. If not, it explores the surroundings to find a coal ore block within a specified distance. Once a coal ore block is found, it proceeds to mine the block to collect coal. If no coal ore is found, it indicates that no coal ore is nearby.
+}

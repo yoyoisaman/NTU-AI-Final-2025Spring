@@ -1,0 +1,3 @@
+async function mineCoalOre(bot) {
+    // The function involves searching for and mining a coal ore block. It first checks if a coal ore block is within a 32-block radius. If no coal ore is found nearby, it explores the area randomly for up to 60 seconds to locate one. Once a coal ore block is found, it proceeds to mine the block. If no coal ore is found after exploration, it indicates the failure to locate any nearby.
+}

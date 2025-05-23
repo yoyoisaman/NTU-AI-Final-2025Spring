@@ -1,0 +1,3 @@
+async function equipStonePickaxe(bot) {
+    // The function checks the bot's inventory for a stone pickaxe. If a stone pickaxe is found, it equips the pickaxe in the bot's hand. If no stone pickaxe is found, it indicates that the inventory does not contain one.
+}

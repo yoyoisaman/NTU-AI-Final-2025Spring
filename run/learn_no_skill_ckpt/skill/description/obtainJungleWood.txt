@@ -1,0 +1,3 @@
+async function obtainJungleWood(bot) {
+    // The function is about collecting at least 4 jungle logs. It first checks the current inventory for the number of jungle logs. If there are already 4 or more jungle logs, it stops further actions. If fewer than 4 logs are present, it explores the environment to find a jungle log block. Once a jungle log is found, it mines the necessary number of logs to reach a total of 4. If no jungle logs are found nearby, it indicates the absence of jungle logs.
+}

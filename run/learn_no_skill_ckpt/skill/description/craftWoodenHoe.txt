@@ -1,0 +1,3 @@
+async function craftWoodenHoe(bot) {
+    // The function checks if a wooden hoe is already present in the inventory. If not, it places a crafting table near the bot. Then, it proceeds to craft a wooden hoe using the crafting table. Once crafted, it confirms the successful creation of the wooden hoe. If the wooden hoe is already in the inventory, it simply acknowledges its presence and exits.
+}

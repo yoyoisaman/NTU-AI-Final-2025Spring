@@ -1,0 +1,3 @@
+async function mineThreeIronOre(bot) {
+    // The function is about mining three iron ore blocks. It first checks if there are at least three iron ore blocks within a 32-block radius. If not enough iron ore blocks are found, it explores the area to locate more. Once three or more iron ore blocks are identified, it proceeds to mine them. If successful, it confirms the mining of three iron ore blocks. If not enough iron ore is found, it indicates the failure to locate sufficient iron ore nearby.
+}

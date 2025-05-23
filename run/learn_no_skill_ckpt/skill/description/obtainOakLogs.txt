@@ -1,0 +1,3 @@
+async function obtainOakLogs(bot) {
+    // The function is about collecting at least 3 oak logs. It first checks the current inventory to see how many oak logs are already available. If there are 3 or more oak logs, it concludes the task. If fewer than 3 logs are present, it explores the surroundings to locate an oak log block. Upon finding an oak log, it calculates the number of additional logs needed and mines the required amount. If no oak logs are found nearby, it indicates the absence of oak logs.
+}

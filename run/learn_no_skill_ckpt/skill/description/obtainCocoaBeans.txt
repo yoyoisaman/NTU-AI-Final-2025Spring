@@ -1,0 +1,3 @@
+async function obtainCocoaBeans(bot) {
+    // The function is about collecting cocoa beans if there are fewer than 3 in the inventory. It first checks the current inventory for the number of cocoa beans. If there are already 3 or more, it stops further actions. If fewer than 3, it explores the environment to find a cocoa pod within a certain distance. Upon finding a cocoa pod, it proceeds to harvest it. If no cocoa pod is found, it indicates the absence of nearby cocoa pods.
+}

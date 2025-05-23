@@ -1,0 +1,3 @@
+async function mineLapisOre(bot) {
+    // The function involves searching for a lapis ore block within a 32-block radius. If a lapis ore is found, it checks the inventory for an iron pickaxe. If an iron pickaxe is available, it equips the pickaxe and proceeds to mine one lapis ore block. If no iron pickaxe is found, it indicates the absence of a suitable tool. If no lapis ore is found nearby, it notes the lack of lapis ore in the vicinity.
+}

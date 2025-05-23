@@ -1,0 +1,3 @@
+async function craftWoodenSword(bot) {
+    // The function involves crafting a wooden sword if one is not already present in the inventory. It first checks the inventory for an existing wooden sword. If a wooden sword is not found, it places a crafting table near the bot. Then, it proceeds to craft a wooden sword using the crafting table. Once the wooden sword is crafted, it confirms the successful crafting.
+}

@@ -1,0 +1,47 @@
+iteration,task,success
+1,Mine 1 wood log,True
+2,Obtain 3 oak logs,True
+3,Craft 1 crafting table,True
+4,Obtain 3 jungle logs,True
+6,Craft 4 jungle wood,True
+10,Craft 1 wooden pickaxe,False
+14,Craft 1 wooden axe,False
+15,Obtain 3 jungle logs,True
+16,Obtain 3 jungle logs,True
+17,Obtain 3 jungle logs,True
+18,Mine 3 jungle logs,True
+19,Mine 3 jungle logs,True
+20,Mine 3 jungle logs,True
+23,Craft 4 sticks,True
+24,Obtain 3 cocoa beans,True
+25,Craft 1 wooden sword,True
+26,Craft 1 wooden hoe,True
+27,Mine 1 coal ore,True
+29,Mine 1 copper ore,True
+30,Mine 1 coal ore,True
+31,Mine 1 coal ore,True
+32,Mine 1 coal ore,True
+36,Smelt 3 raw copper,False
+37,Smelt 3 raw copper,True
+38,Equip stone pickaxe,True
+40,Mine 1 coal ore,True
+41,Mine 3 coal ore,True
+43,Mine 3 iron ore,True
+47,Smelt 5 raw iron,False
+48,Craft 1 iron pickaxe,True
+49,Mine 3 iron ore,True
+50,Mine 3 iron ore,True
+54,Smelt 8 raw iron,False
+55,Mine 1 lapis ore,True
+59,Smelt 7 raw iron,False
+63,Kill 1 spider,False
+66,Mine 1 gold ore,True
+70,Obtain 1 food item,False
+71,Place a chest,True
+75,Deposit useless items into the chest at (77, 43, 63),True
+79,Craft 1 bowl,False
+83,Obtain 1 melon slice,False
+87,Smelt 3 raw iron,False
+91,Craft 8 cookies,False
+95,Craft 1 shield,False
+97,Smelt 4 raw gold,False

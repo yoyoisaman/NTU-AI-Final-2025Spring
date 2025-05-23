@@ -1,0 +1,3 @@
+async function placeChest(bot) {
+    // The function checks if there is a chest in the inventory and if not, it stops the process. If a chest is available, it calculates a position next to the bot to place the chest. It then places the chest at the determined position.
+}

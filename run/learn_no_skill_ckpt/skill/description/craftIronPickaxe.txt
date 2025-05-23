@@ -1,0 +1,3 @@
+async function craftIronPickaxe(bot) {
+    // The function is about crafting an iron pickaxe. It first checks if the bot already has an iron pickaxe in its inventory. If the iron pickaxe is not present, it places a crafting table near the bot. Then, it proceeds to craft an iron pickaxe using the crafting table. Once crafted, it confirms the successful creation of the iron pickaxe.
+}

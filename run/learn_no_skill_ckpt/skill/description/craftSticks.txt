@@ -1,0 +1,3 @@
+async function craftSticks(bot) {
+    // The function checks if there are at least 2 jungle planks in the inventory. If there are enough planks, it proceeds to craft 4 sticks using these planks. If there are not enough planks, it indicates that crafting sticks is not possible.
+}

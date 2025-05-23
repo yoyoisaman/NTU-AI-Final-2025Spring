@@ -1,0 +1,3 @@
+async function mineGoldOre(bot) {
+    // The function is about mining a gold ore using an iron pickaxe. It first checks if an iron pickaxe is available in the inventory, and if not, it crafts one, ensuring there are enough sticks and a crafting table available. Once the iron pickaxe is crafted or found, it is equipped in the hand. The function then searches for a gold ore block within a certain distance. If no gold ore is found nearby, it explores the environment until one is located. Once a gold ore block is found, it is mined using the iron pickaxe.
+}
