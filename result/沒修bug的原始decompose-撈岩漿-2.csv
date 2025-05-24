@@ -1,0 +1,14 @@
+iteration,task,success
+2,Craft 1 Crafting Table,True
+6,Craft 1 Wooden Pickaxe,True
+10,Mine 3 Stone,False
+13,Mine 3 Stone,True
+16,Craft 1 Stone Pickaxe,True
+17,Mine 3 Iron Ore,True
+18,Craft 1 Furnace,True
+22,Smelt 3 Iron Ore,False
+26,Smelt 3 Iron Ore,False
+30,Smelt 3 Iron Ore,False
+34,Smelt 3 Iron Ore,False
+38,Smelt 3 Iron Ore,False
+42,Smelt 3 Iron Ore,False
