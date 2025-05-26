@@ -1,0 +1,34 @@
+iteration,task,success
+1,Mine 1 wood log,True
+5,Mine 5 copper ore,False
+6,Obtain 10 jungle logs,True
+10,Craft 1 wooden pickaxe,True
+13,Mine 20 cobblestone,True
+15,Craft 1 stone pickaxe,True
+17,Mine 10 coal ore,True
+18,Mine 2 copper ore,True
+19,Mine 10 coal ore,True
+20,Mine 10 granite,True
+21,Mine 10 coal ore,True
+22,Mine 5 iron ore,True
+24,Smelt 6 raw iron,True
+27,Mine 10 iron ore,True
+28,Mine 5 lapis lazuli ore,True
+30,Craft 1 iron pickaxe,True
+31,Mine 15 iron ore,True
+32,Smelt 18 raw iron,True
+33,Mine 10 copper ore,True
+34,Smelt 23 raw copper,True
+36,Mine 5 diamond ore,True
+37,Mine 5 gold ore,True
+38,Smelt 5 raw gold,True
+39,Craft 1 diamond pickaxe,True
+40,Mine 10 gold ore,True
+41,Place a chest,True
+42,Mine 20 deepslate,True
+44,Deposit useless items into the chest at (5, 9, 35),True
+48,Mine 10 obsidian,False
+52,Mine 10 obsidian,False
+56,Mine 5 obsidian,False
+57,Mine 5 deepslate diamond ore,True
+58,Mine 10 deepslate diamond ore,True

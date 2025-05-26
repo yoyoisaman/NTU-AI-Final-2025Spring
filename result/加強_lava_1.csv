@@ -1,0 +1,14 @@
+iteration,task,success
+1,Mine 4 wood logs,True
+2,Craft 1 crafting table,True
+6,Place 1 crafting table,False
+10,Craft 1 wooden pickaxe,False
+11,Mine 11 cobblestone,True
+12,Craft 1 stone pickaxe,True
+16,Craft 1 furnace,False
+20,Place 1 furnace,False
+21,Mine 3 iron ore,True
+23,Smelt 3 iron ore,True
+25,Craft 1 bucket,True
+28,Locate 1 lava source block,True
+32,Collect 1 lava bucket,True

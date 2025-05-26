@@ -1,0 +1,26 @@
+iteration,task,success
+1,Mine 1 wood log,True
+2,Obtain 4 oak logs,True
+5,Craft 1 crafting table,True
+6,Craft 1 wooden pickaxe,True
+7,Mine 3 cobblestone,True
+8,Mine 1 coal ore,True
+11,Mine 1 copper ore,True
+15,Smelt 1 raw copper,False
+16,Mine 1 coal ore,True
+17,Mine 1 iron ore,True
+18,Mine 3 iron ore,True
+22,Smelt 4 raw iron,False
+26,Mine 3 iron ore,False
+27,Craft 1 iron pickaxe,True
+28,Mine 5 iron ore,True
+32,Smelt 1 raw copper,False
+36,Smelt 1 raw iron,False
+40,Smelt 1 raw iron,False
+41,Mine 1 lapis ore,True
+42,Mine 1 copper ore,True
+43,Mine 1 copper ore,True
+44,Mine 1 redstone ore,True
+45,Mine 3 redstone ore,True
+46,Mine 1 gold ore,True
+50,Smelt 1 raw gold,False
