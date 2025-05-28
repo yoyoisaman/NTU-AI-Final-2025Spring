@@ -1,0 +1,15 @@
+iteration,task,success
+1,Mine 4 wood logs,True
+2,Craft 1 crafting table,True
+6,Place 1 crafting table,False
+7,Craft 8 sticks,True
+11,Craft 1 wooden pickaxe,False
+12,Mine 11 cobblestone,True
+16,Craft 1 furnace,True
+20,Craft 1 stone pickaxe,False
+24,Mine 10 iron ore,True
+25,Mine 3 coal,True
+26,Smelt 10 iron ore,True
+27,Craft 1 iron pickaxe,True
+28,Mine 3 diamonds,True
+29,Craft 1 diamond pickaxe,True
