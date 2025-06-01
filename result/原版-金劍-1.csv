@@ -17,3 +17,23 @@ iteration,task,success
 38,Smelt 2 gold ingots,True
 42,Craft 1 golden sword,False
 44,Craft 1 golden sword,True
+
+{
+    "wood log": 1,
+    "crafting table": 2,
+    "crafting table": 10,
+    "wooden pickaxe": 11,
+    "wooden pickaxe": 27,
+    "stone pickaxe": 28,
+    "stone pickaxe": 29,
+    "furnace": 30,
+    "furnace": 31,
+    "iron ingot": 32,
+    "iron ingot": 34,
+    "iron pickaxe": 35,
+    "gold ore": 36,
+    "gold ore": 37,
+    "gold ingot": 38,
+    "gold ingot": 43,
+    "golden sword": 44
+}
