@@ -1,0 +1,3 @@
+async function smeltRawGold(bot) {
+    // The function involves smelting raw gold into gold ingots. It first checks if a furnace is available in the inventory. If a furnace is not found, the process is halted. If a furnace is available, it is placed near the bot. The function then proceeds to smelt 5 raw gold using coal as fuel. Once the smelting is complete, the raw gold is converted into gold ingots.
+}

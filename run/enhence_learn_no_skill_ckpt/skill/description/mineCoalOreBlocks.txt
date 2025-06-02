@@ -1,0 +1,3 @@
+async function mineCoalOreBlocks(bot) {
+    // The function involves mining 10 coal ore blocks using a pickaxe. It first checks the inventory for a stone or wooden pickaxe and equips it if available. If no pickaxe is found, the process is halted. The function then searches for coal ore blocks within a specified distance. Upon finding a coal ore block, it mines the block and increments the count of mined coal ore. This process continues until 10 coal ore blocks are mined or no more coal ore is found nearby.
+}

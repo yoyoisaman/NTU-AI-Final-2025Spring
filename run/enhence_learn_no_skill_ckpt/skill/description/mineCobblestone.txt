@@ -1,0 +1,3 @@
+async function mineCobblestone(bot) {
+    // The function checks the bot's inventory for cobblestone and determines how many more are needed to reach a total of 20. If the bot already has 20 or more cobblestones, it exits. If not, it checks for a wooden pickaxe in the inventory and equips it, or crafts one if it's missing. The function then searches for a stone block within a certain distance. Once a stone block is found, it mines the required amount of cobblestone. If no stone block is found, it indicates that no stone is nearby.
+}

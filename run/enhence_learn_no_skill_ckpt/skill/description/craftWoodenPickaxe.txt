@@ -1,0 +1,3 @@
+async function craftWoodenPickaxe(bot) {
+    // The function is about crafting a wooden pickaxe. It first checks if there are enough sticks and planks in the inventory. If there are not enough planks, it converts jungle logs into planks. If there are not enough sticks, it crafts them from planks. It then checks for a crafting table in the inventory and crafts one if necessary. The crafting table is placed, and finally, the wooden pickaxe is crafted.
+}

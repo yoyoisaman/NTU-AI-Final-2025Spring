@@ -1,0 +1,3 @@
+async function mine10IronOre(bot) {
+    // The function involves mining 10 iron ore using a stone pickaxe. It first checks if a stone pickaxe is available in the inventory, and if not, attempts to craft one using cobblestone and sticks, provided a crafting table is available. Once the stone pickaxe is equipped, the function searches for iron ore blocks within a certain distance. It continues to explore and mine iron ore until a total of 10 iron ore is collected. If the required amount of iron ore is mined, it confirms the success; otherwise, it indicates the need to find more iron ore.
+}

@@ -1,0 +1,3 @@
+async function mineDeepslate(bot) {
+    // The function involves mining 20 deepslate blocks using a diamond pickaxe. It first checks if a diamond pickaxe is available in the inventory. If available, the pickaxe is equipped for mining. A helper function is used to locate deepslate blocks within a certain distance. If a deepslate block is found, the function proceeds to mine 20 deepslate blocks. If no deepslate is found, the function indicates that no deepslate is nearby.
+}

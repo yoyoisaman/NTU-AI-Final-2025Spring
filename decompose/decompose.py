@@ -26,7 +26,7 @@ def decompose_task_into_subgoals(main_task: str, detailed_guide: str) -> List[st
         - "Mine 10 Iron Ore"
         - "Craft 1 Furnace"
         - "Smelt 10 Iron Ore"
-        - "Craft 1 Iron Pickaxe (one pickaxe need 3 iron)"
+        - "Craft 1 Iron Pickaxe"
     2.  **Strict Ordering**: Subgoals must be in the exact chronological order they need to be completed. For example, "Craft 1 Wooden Pickaxe" must come after "Mine 5 Wood" and "Craft 1 Crafting Table".
     3.  **Clarity and Actionability**: Each subgoal should be a clear, concise instruction.
     

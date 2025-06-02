@@ -1,0 +1,3 @@
+async function craftDiamondPickaxe(bot) {
+    // The function is about crafting a diamond pickaxe. It first checks if there are enough sticks in the inventory, and if not, it attempts to craft sticks using jungle logs. If jungle logs are available, it crafts the necessary planks and sticks. It then checks for the presence of a crafting table nearby and places one if needed. Finally, it crafts the diamond pickaxe using the available resources.
+}

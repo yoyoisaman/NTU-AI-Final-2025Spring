@@ -1,0 +1,3 @@
+async function craftIronPickaxe(bot) {
+    // The function is about crafting an iron pickaxe. It first checks if there are enough sticks in the inventory, and if not, it crafts sticks using jungle planks or converts jungle logs to planks if necessary. It then checks for a crafting table in the inventory, crafting one if there are enough jungle planks available. The crafting table is placed next to the bot if needed. Finally, the function crafts an iron pickaxe using the crafting table.
+}

@@ -119,7 +119,7 @@ async def rag_enhanced_guide(task_string, search_results):
 
 async def main():
     # task = input("請輸入您的 Minecraft 任務: ")
-    task = "Craft 1 diamond pickaxe"
+    task = "Craft a Golden Sword"
     search_results = await search(f"Minecraft {task}")
     for r in search_results:
         print(r)
