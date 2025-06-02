@@ -12,3 +12,23 @@ iteration,task,success
 25,Craft 1 bucket,True
 28,Locate 1 lava source block,True
 32,Collect 1 lava bucket,True
+
+
+obj2_data1 = [
+    ("wood log", 1),
+    ("crafting table", 2),
+    ("crafting table", 10),
+    ("wooden pickaxe", 11),
+    ("stone pickaxe", 12),
+    ("stone pickaxe", 20),
+    ("raw iron", 21),
+    ("raw iron", 22),
+    ("furnace", 22.5),
+    ("iron ingot", 23),
+    ("iron ingot", 24),
+    ("bucket", 25),
+    ("bucket", 27),
+    ("lava source", 28),
+    ("lava source", 31),
+    ("lava bucket", 32)
+]

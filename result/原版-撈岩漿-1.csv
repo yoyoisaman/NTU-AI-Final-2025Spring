@@ -9,3 +9,10 @@ iteration,task,success
 27,Craft 1 Wooden Pickaxe,False
 31,Craft 1 Wooden Pickaxe,False
 35,Craft 1 Wooden Pickaxe,False
+
+obj2_data2 = [
+    ("wood log", 1),
+    ("crafting table", 2),
+    ("crafting table", 14),
+    ("wooden pickaxe", 15),
+]

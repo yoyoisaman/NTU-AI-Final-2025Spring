@@ -12,3 +12,20 @@ iteration,task,success
 14,Mine 2 Gold Ore,True
 16,Smelt 2 Gold Ore,True
 17,Craft 1 Golden Sword,True
+
+{
+    "wood log": 1,
+    "crafting table": 2,
+    "crafting table": 4,
+    "wooden pickaxe": 5,
+    "wooden pickaxe": 8,
+    "stone pickaxe": 9,
+    "stone pickaxe": 10,
+    "furnace": 11,
+    "iron ingot":  12,
+    "iron pickaxe": 13,
+    "raw gold": 14,
+    "raw gold": 15,
+    "gold ingot": 16,
+    "golden sword": 17
+}

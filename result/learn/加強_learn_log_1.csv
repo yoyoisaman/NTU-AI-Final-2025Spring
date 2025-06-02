@@ -32,3 +32,36 @@ iteration,task,success
 56,Mine 5 obsidian,False
 57,Mine 5 deepslate diamond ore,True
 58,Mine 10 deepslate diamond ore,True
+
+learn_log = {
+    (1,1): "wood log", # + wood log
+    (9,1): "",
+    (10,5): "wooden pickaxe", # + wooden pickaxe / wooden planks / stick / crafting table
+    (12,5): "",
+    (13,6): "cobblestone", # + cobblestone
+    (14,6): "",
+    (15,7): "stone pickaxe", # + stone pickaxe
+    (16,7): "",
+    (17,8): "coal", # + coal
+    (18,9): "raw copper", # + raw copper
+    (19,9): "",
+    (20,10): "granite", # + granite
+    (21,10): "",
+    (22,11): "raw iron", # + raw iron
+    (23,11): "",
+    (24,13): "iron ingot", # + iron ingot / furnace
+    (27,13): "",
+    (28,14): "lapis lazuli", # + lapis lazuli
+    (29,14): "",
+    (30,15): "iron pickaxe", # + iron pickaxe
+    (33,15): "",
+    (34,16): "copper ingot", # + copper ingot
+    (35,16): "",
+    (36,17): "diamond", # + diamond
+    (37,18): "raw gold", # + raw gold
+    (38,19): "gold ingot", # + gold ingot
+    (39,20): "diamond pickaxe", # + diamond pickaxe
+    (40,20): "",
+    (41,21): "chest", # + chest
+    (42,22): "deepslate", # + deepslate
+}

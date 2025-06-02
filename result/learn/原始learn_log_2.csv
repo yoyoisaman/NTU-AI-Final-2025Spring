@@ -32,3 +32,19 @@ iteration,task,success
 45,Mine 3 iron ore,True
 49,Smelt 1 raw iron,False
 50,Mine 3 iron ore,True
+
+learn_log = {
+    (1,1): "wood log", # + wood logs
+    (2,2): "plank", # + plank
+    (11,2): "",
+    (12,5): "wooden pickaxe", # wooden pickaxe / stick / crafting table
+    (13,6): "cobblestone", # + cobblestone
+    (14,6): "",
+    (15,7): "raw copper", # + raw copper
+    (16,8): "coal", # + coal
+    (19,8): "",
+    (20,9): "lapis lazuli", # + lapis lazuli
+    (21,10): "diorite", # + diorite
+    (36,10): "",
+    (37,11): "raw iron", # + raw iron
+}
