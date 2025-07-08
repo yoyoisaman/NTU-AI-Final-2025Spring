@@ -4,6 +4,7 @@
 [![Python Version](https://img.shields.io/badge/Python-3.9-blue.svg)](https://github.com/MineDojo/Voyager)
 ______________________________________________________________________
 
+王凱右 (R13922022) 蔡佾家 (R13922090) 胡凱騰 (R13922090) 江德偉 (D10725001)
 
 ![](images/decompose.png)
 

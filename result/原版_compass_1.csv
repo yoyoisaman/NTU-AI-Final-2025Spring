@@ -1,8 +1,0 @@
-iteration,task,success
-1,Mine 3 jungle_log,True
-2,Craft 12 planks,True
-3,Craft 4 sticks,True
-4,Craft 1 crafting_table,True
-8,Place crafting_table,False
-12,Place crafting_table,False
-16,Place crafting_table,False
